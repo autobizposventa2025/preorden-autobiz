@@ -497,6 +497,11 @@ function cerrarSesion(){
   document.getElementById('btn-reload').style.display='none';
 }
 
+// Auto-recargar cada 5 minutos si hay sesión activa
+setInterval(()=>{
+  if(accessToken) cargarTurnosDesideDrive();
+}, 5 * 60 * 1000);
+
 // ══════════════════════════════════════════
 //  CARGAR TURNOS DESDE SHEETS
 // ══════════════════════════════════════════
@@ -520,7 +525,7 @@ async function cargarTurnosDesideDrive(){
       propietario:r[6]||'',
       comentarios:r[7]||''
     }));
-    document.getElementById('login-user').textContent=`posventaautobiz@gmail.com — ${turnosData.length} turnos cargados`;
+    document.getElementById('login-user').textContent=`autobizposventa2025@gmail.com — ${turnosData.length} turnos cargados`;
     mostrarNoti(`☁️ ${turnosData.length} turnos cargados desde Google Sheets`,3000);
   }catch(e){
     turnosData=turnosFallback;
