@@ -245,7 +245,7 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
       <div class="grid2" style="margin-bottom:12px">
         <div>
           <label>KM de Service</label>
-          <select id="km-service" onchange="cargarFiltros()">
+          <select id="km-service" onchange="renderFiltros()">
             <option value="">— Seleccionar —</option>
             <option value="15">15.000 km</option>
             <option value="30">30.000 km</option>
@@ -721,9 +721,11 @@ function llenarDatos(t){
 function cargarFiltros(){
   const modelo=document.getElementById('modelo').value;
   actualizarSelectorKM(modelo);
-  console.log('Modelo seleccionado:', modelo);
-  console.log('Filtros disponibles:', Object.keys(filtros));
-  console.log('Filtro encontrado:', filtros[modelo]);
+  renderFiltros();
+}
+
+function renderFiltros(){
+  const modelo=document.getElementById('modelo').value;
   const cont=document.getElementById('tabla-filtros');
   const badge=document.getElementById('badge-service');
   if(!modelo||!filtros[modelo]){cont.innerHTML='<div class="no-data">Seleccioná un modelo para ver los filtros</div>';badge.textContent='';return;}
