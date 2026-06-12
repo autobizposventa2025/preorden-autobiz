@@ -193,7 +193,7 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
             <option value="Mondeo 2.0L/2.5L">Nuevo Mondeo 2.0L/2.5L Nafta</option>
             <option value="Bronco">Bronco</option>
             <option value="Maverick">Maverick (Nafta 2.0L)</option>
-            <option value="Maverick Híbrida">Maverick Híbrida 2.5L FHEV</option>
+            <option value="Maverick Hibrida">Maverick Híbrida 2.5L FHEV</option>
             <option value="Transit">Transit</option>
           </select>
         </div>
@@ -385,6 +385,7 @@ const kmPorModelo = {
   "Ranger Raptor":         [16,32,48,64,80,96,112,128,144,160],
   "Mondeo 2.0L/2.5L":      [15,30,45,60,75,90,105],
   "Maverick":              [15,30,45,60,75,90,105],
+  "Maverick Hibrida":      [15,30,45,60,75,90,105],
   "Bronco":                [15,30,45,60,75,90,105],
   "Transit":               [15,30,45,60,75,90,105],
 };
@@ -720,6 +721,9 @@ function llenarDatos(t){
 function cargarFiltros(){
   const modelo=document.getElementById('modelo').value;
   actualizarSelectorKM(modelo);
+  console.log('Modelo seleccionado:', modelo);
+  console.log('Filtros disponibles:', Object.keys(filtros));
+  console.log('Filtro encontrado:', filtros[modelo]);
   const cont=document.getElementById('tabla-filtros');
   const badge=document.getElementById('badge-service');
   if(!modelo||!filtros[modelo]){cont.innerHTML='<div class="no-data">Seleccioná un modelo para ver los filtros</div>';badge.textContent='';return;}
