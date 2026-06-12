@@ -19,7 +19,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#222;font-
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 label{display:block;font-size:11px;font-weight:700;color:#555;margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
-input,select,textarea{width:100%;border:1.5px solid #d0d5dd;border-radius:6px;padding:10px;font-size:14px;color:#222;background:#fafafa;-webkit-appearance:none}
+input,select,textarea{width:100%;border:1.5px solid #d0d5dd;border-radius:6px;padding:10px;font-size:14px;color:#222;background:#fafafa;-webkit-appearance:none;appearance:none}
 input:focus,select:focus,textarea:focus{outline:none;border-color:#003087;background:#fff}
 textarea{resize:vertical;min-height:60px}
 .patente-input{font-size:18px;font-weight:800;letter-spacing:3px;text-transform:uppercase;background:#fff8e1;border-color:#ffc107;text-align:center}
@@ -41,8 +41,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
 .btn-danger{background:#fff0f0;color:#c0392b;border:1.5px solid #f5c6cb}
 .btn-print{background:#28a745;color:#fff}
 .btn-pdf{background:#dc3545;color:#fff}
-.btn-google{background:#fff;color:#444;border:1.5px solid #ddd;display:flex;align-items:center;gap:8px;font-size:13px}
-.btn-google img{width:18px;height:18px}
 .horarios{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .estado-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .estado-badge{padding:8px 14px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;border:2px solid transparent;min-height:40px;display:flex;align-items:center;transition:all .2s}
@@ -55,20 +53,10 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
 .km-info{font-size:11px;color:#888;margin-top:3px}
 .badge{display:inline-block;background:#e8f0fe;color:#003087;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:6px}
 .no-data{color:#aaa;font-style:italic;font-size:13px;padding:12px;text-align:center}
-
-/* LOGIN BANNER */
-#login-banner{background:#003087;color:#fff;text-align:center;padding:20px;border-radius:10px;margin-bottom:16px}
-#login-banner h2{font-size:16px;margin-bottom:8px}
-#login-banner p{font-size:12px;opacity:.8;margin-bottom:14px}
-#login-status{background:#d4edda;color:#155724;border:1px solid #c3e6cb;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;margin-bottom:12px;display:none;align-items:center;gap:8px}
-
-/* FIRMA */
 .firma-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
 .firma-canvas{border:2px dashed #bbb;border-radius:8px;background:#fafafa;cursor:crosshair;touch-action:none;display:block;width:100%;max-width:380px}
 .firma-canvas.firmado{border-color:#28a745;border-style:solid}
 .btn-limpiar-firma{background:#fff0f0;color:#c0392b;border:1px solid #f5c6cb;border-radius:5px;padding:5px 12px;font-size:12px;cursor:pointer;font-weight:600}
-
-/* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;display:none;align-items:center;justify-content:center;padding:16px}
 .modal-overlay.open{display:flex}
 .modal{background:#fff;border-radius:12px;padding:20px;max-width:700px;width:100%;box-shadow:0 8px 32px rgba(0,0,0,.3)}
@@ -76,23 +64,21 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
 .modal p{font-size:12px;color:#888;margin-bottom:12px}
 .modal-canvas{border:2px solid #003087;border-radius:8px;background:#fff;cursor:crosshair;touch-action:none;display:block;width:100%}
 .modal-btns{display:flex;gap:10px;margin-top:14px;justify-content:flex-end;flex-wrap:wrap}
-
-/* SUGERENCIAS */
 #sugerencias ul{position:absolute;z-index:999;background:#fff;border:1.5px solid #003087;border-radius:8px;list-style:none;width:100%;min-width:280px;box-shadow:0 4px 14px rgba(0,0,0,.18);margin-top:2px}
 #sugerencias li{padding:10px 12px;cursor:pointer;border-bottom:1px solid #f0f0f0;font-size:13px}
 #sugerencias li:hover{background:#e8f0fe}
-
+#login-banner{background:#003087;color:#fff;text-align:center;padding:20px;border-radius:10px;margin-bottom:16px}
+#login-banner h2{font-size:16px;margin-bottom:8px}
+#login-banner p{font-size:12px;opacity:.8;margin-bottom:14px}
+#login-status{background:#d4edda;color:#155724;border:1px solid #c3e6cb;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;margin-bottom:12px;display:none;align-items:center;gap:8px}
 #pdf-notice{position:fixed;bottom:20px;right:20px;background:#003087;color:#fff;padding:12px 18px;border-radius:8px;font-size:13px;font-weight:600;display:none;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.3);max-width:340px}
-.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;margin-right:6px}
-@keyframes spin{to{transform:rotate(360deg)}}
-
 @media print{
   body{background:#fff;font-size:11px}
   .no-print{display:none!important}
   .card{box-shadow:none;border:1px solid #ccc;margin-bottom:6px;page-break-inside:avoid}
   .card-header{background:#003087!important;color:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   input,select,textarea{border:none!important;background:transparent!important;padding:2px 0!important;font-size:11px}
-  .modal-overlay,.firma-wrap button{display:none!important}
+  .modal-overlay{display:none!important}
 }
 @media(max-width:680px){
   .grid2,.grid3,.horarios{grid-template-columns:1fr}
@@ -119,7 +105,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
 
 <div class="container">
 
-  <!-- LOGIN GOOGLE -->
   <div id="login-banner" class="no-print">
     <h2>🔐 Conectar con Google Drive</h2>
     <p>Iniciá sesión con <strong>autobizposventa2025@gmail.com</strong> para cargar los turnos del día automáticamente</p>
@@ -129,34 +114,26 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
   </div>
 
   <div id="login-status" class="no-print">
-    ✅ <span id="login-user">Conectado</span> — Turnos cargados desde Google Sheets
+    ✅ <span id="login-user">Conectado</span>
     <button class="btn btn-danger" style="margin-left:auto;padding:4px 10px;font-size:12px" onclick="cerrarSesion()">Salir</button>
   </div>
 
-  <!-- IDENTIFICACIÓN -->
   <div class="card">
     <div class="card-header">🚗 Identificación del Vehículo</div>
     <div class="card-body">
-      <div class="alert-box" id="alert-not-found">⚠️ Patente no encontrada en los turnos del día. Completá los datos manualmente.</div>
+      <div class="alert-box" id="alert-not-found">⚠️ Patente no encontrada. Completá los datos manualmente.</div>
       <div class="grid3">
         <div style="position:relative">
           <label>Patente / Placa</label>
           <input type="text" id="patente" class="patente-input" placeholder="AG179FT" oninput="buscarPatente(this.value)" autocomplete="off" autocapitalize="characters">
           <div id="sugerencias"></div>
         </div>
-        <div>
-          <label>Fecha de Turno</label>
-          <input type="text" id="fecha-turno">
-        </div>
-        <div>
-          <label>Nº de PRE ORDEN</label>
-          <input type="text" id="nro-orden" style="background:#eef2ff;font-weight:800;color:#003087">
-        </div>
+        <div><label>Fecha de Turno</label><input type="text" id="fecha-turno"></div>
+        <div><label>Nº de PRE ORDEN</label><input type="text" id="nro-orden" style="background:#eef2ff;font-weight:800;color:#003087"></div>
       </div>
     </div>
   </div>
 
-  <!-- DATOS DEL TURNO -->
   <div class="card">
     <div class="card-header">👤 Datos del Turno</div>
     <div class="card-body">
@@ -166,21 +143,15 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
           <label>Asesor</label>
           <select id="asesor">
             <option value="">— Seleccionar —</option>
-            <option>PATRICIO DEL VALLE</option>
-            <option>HORACIO SAMMARCO</option>
-            <option>NARELLA MANITTO</option>
-            <option>GUSTAVO VARELA</option>
-            <option>LUIS CINQUERRUI</option>
-            <option>MARCOS SEDRAN</option>
-            <option>ARIEL CASARES</option>
-            <option>JULIAN TIEMPO</option>
-            <option>INES BENEDIT</option>
+            <option>PATRICIO DEL VALLE</option><option>HORACIO SAMMARCO</option><option>NARELLA MANITTO</option>
+            <option>GUSTAVO VARELA</option><option>LUIS CINQUERRUI</option><option>MARCOS SEDRAN</option>
+            <option>ARIEL CASARES</option><option>JULIAN TIEMPO</option><option>INES BENEDIT</option>
             <option>CARLOS JOSE BUSCEMI</option>
           </select>
         </div>
         <div>
           <label>Modelo</label>
-          <select id="modelo" onchange="cargarFiltros()">
+          <select id="modelo" onchange="onModeloChange()">
             <option value="">— Seleccionar modelo —</option>
             <option value="KA 1.5L Dragon">Nuevo KA 1.5L Dragon</option>
             <option value="Nuevo Fiesta 1.6L">Nuevo Fiesta 1.6L Nafta</option>
@@ -190,14 +161,14 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
             <option value="Ranger P703 3.0L V6">Ranger P703 3.0L V6</option>
             <option value="Ranger P703 2.0L">Ranger P703 2.0L</option>
             <option value="Ranger Raptor">Ranger Raptor P703 3.0L</option>
-            <option value="Mondeo 2.0L/2.5L">Nuevo Mondeo 2.0L/2.5L Nafta</option>
+            <option value="Mondeo 2.0L/2.5L">Mondeo 2.0L/2.5L Nafta</option>
             <option value="Bronco">Bronco</option>
             <option value="Maverick">Maverick (Nafta 2.0L)</option>
             <option value="Maverick Hibrida">Maverick Híbrida 2.5L FHEV</option>
             <option value="Transit">Transit</option>
           </select>
         </div>
-        <div><label>Motorización</label><input type="text" id="motorizacion" placeholder="Ej: 3.0L V6"></div>
+        <div><label>Motorización</label><input type="text" id="motorizacion" placeholder="Ej: 2.0L GTDI"></div>
         <div>
           <label>Kilometraje actual</label>
           <input type="number" id="km" placeholder="45000" inputmode="numeric" oninput="actualizarKm()">
@@ -225,7 +196,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
     </div>
   </div>
 
-  <!-- HORARIOS -->
   <div class="card">
     <div class="card-header">🕐 Horarios</div>
     <div class="card-body">
@@ -238,7 +208,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
     </div>
   </div>
 
-  <!-- FILTROS -->
   <div class="card">
     <div class="card-header">⚙️ Filtros e Insumos del Service <span class="badge" id="badge-service"></span></div>
     <div class="card-body">
@@ -247,13 +216,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
           <label>KM de Service</label>
           <select id="km-service" onchange="renderFiltros()">
             <option value="">— Seleccionar —</option>
-            <option value="15">15.000 km</option>
-            <option value="30">30.000 km</option>
-            <option value="45">45.000 km</option>
-            <option value="60">60.000 km</option>
-            <option value="75">75.000 km</option>
-            <option value="90">90.000 km</option>
-            <option value="105">105.000 km</option>
           </select>
         </div>
         <div>
@@ -267,7 +229,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
     </div>
   </div>
 
-  <!-- TRABAJOS -->
   <div class="card">
     <div class="card-header">🔧 Trabajos Adicionales / Reparaciones</div>
     <div class="card-body">
@@ -286,7 +247,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
     </div>
   </div>
 
-  <!-- FIRMAS -->
   <div class="card">
     <div class="card-header">✍️ Conformidad y Firmas</div>
     <div class="card-body">
@@ -324,7 +284,6 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
   </div>
 </div>
 
-<!-- MODAL FIRMA -->
 <div class="modal-overlay" id="modal-firma">
   <div class="modal">
     <h2 id="modal-titulo">Firma</h2>
@@ -341,71 +300,39 @@ input[type=checkbox]{width:20px;height:20px;cursor:pointer}
 <div id="pdf-notice"></div>
 
 <script>
-// ══════════════════════════════════════════
-//  CONFIG GOOGLE SHEETS
-// ══════════════════════════════════════════
-const CLIENT_ID = '333376123121-2fbhmomdrh331in65ikk9fpc3gpaaus4.apps.googleusercontent.com';
-const SHEET_TURNOS = '1VKVrhSmIrV3UPcVc9u5_lnvegx4LFV4oxtj2QeasQO4';
-const SHEET_SERVICIOS = '1LRyEtezzCJF2kkZAz3ZoXaQy3qtGyBPG6w9QpMMpjBA';
-const SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+var CLIENT_ID='333376123121-2fbhmomdrh331in65ikk9fpc3gpaaus4.apps.googleusercontent.com';
+var SHEET_TURNOS='1VKVrhSmIrV3UPcVc9u5_lnvegx4LFV4oxtj2QeasQO4';
+var accessToken=null;
+var turnosData=[];
 
-let accessToken = null;
-let turnosData = [];
-
-// ══════════════════════════════════════════
-//  DATOS DE RESPALDO (del sheet leído)
-// ══════════════════════════════════════════
-const turnosFallback = [
-  {patente:"AF468OX",fecha:"10/06/2026",hora:"8:00",asesor:"PATRICIO DEL VALLE",modelo:"ECOSPORT 2.0L",motorizacion:"1.5DRAGA",propietario:"SEBASTIAN LUIS ZABALJAUREGUI",comentarios:"4to servicio (ESPERA) + CAMPAÑA (25S12 – INSPECCION DE LOS SEMIEJES DELANTEROS) sin items adicionales valor info: $426.650 / $362.650 IARA"},
-  {patente:"AD095UO",fecha:"10/06/2026",hora:"8:20",asesor:"HORACIO SAMMARCO",modelo:"Mondeo 2.0L/2.5L",motorizacion:"2.0LGTDI",propietario:"MARIA GABRIELA MASTRONARDI",comentarios:"REVISION PERDIDA DE AGUA $680.000"},
-  {patente:"AH798ED",fecha:"10/06/2026",hora:"8:20",asesor:"NARELLA MANITTO",modelo:"Territory 1.8L",motorizacion:"1.8LGTDI",propietario:"LUCIA BEATRIZ MOREL",comentarios:"1ER SERVICIO SIN ITEMS ADICIONALES VALOR INFO: $494.430 IARA"},
-  {patente:"AG611LM",fecha:"10/06/2026",hora:"8:20",asesor:"PATRICIO DEL VALLE",modelo:"Territory 1.8L",motorizacion:"1.8LGTDI",propietario:"GUSTAVO VARELA",comentarios:"2º SERVICE (ya ingresó ayer)"},
-  {patente:"AG179FT",fecha:"10/06/2026",hora:"8:40",asesor:"PATRICIO DEL VALLE",modelo:"Ranger P703 3.0L V6",motorizacion:"3.0L V6",propietario:"MARCELO RUBEN BASILOTTA",comentarios:"REEMPLAZO BURLETE PUERTA IZQUIERA ($) M.O EN EL DÍA."},
-  {patente:"AG378XY",fecha:"10/06/2026",hora:"9:00",asesor:"NARELLA MANITTO",modelo:"Ranger P703 2.0L",motorizacion:"2.0LPANC",propietario:"LUIS CINQUERRUI",comentarios:"PICK UP REEMPLAZO (G) AMORTIGUADOR (48HS) Revisar olor a combustion"},
-  {patente:"AI285HV",fecha:"10/06/2026",hora:"9:00",asesor:"PATRICIO DEL VALLE",modelo:"Territory 1.8L",motorizacion:"1.8LGTDI",propietario:"NICOLAS GABRIEL NAZAR ALMUIÑA",comentarios:"REVISAR (G) 48HS PALANCA DEL ASIENTO QUEDÓ INCLINADA HACIA ADELANTE"},
-  {patente:"AH662BS",fecha:"10/06/2026",hora:"9:20",asesor:"NARELLA MANITTO",modelo:"Territory 1.8L",motorizacion:"1.8LGTDI",propietario:"MARÍA EMMA ROSA SCHIRO",comentarios:"REVISION (G) (48HS) PONE EN 33 LOS NEUMATICOS PERO LE MARCA MENOS LA PRESION NO MARCA BIEN"},
-  {patente:"AH366GM",fecha:"10/06/2026",hora:"9:20",asesor:"PATRICIO DEL VALLE",modelo:"Ranger P703 3.0L V6",motorizacion:"3.0L V6",propietario:"MARCO SEDRAN",comentarios:"REPARACION CLIENTE MANIFIESTA QUE ESCUCHA RUIDO A GOLPETEO EN EL TREN DELANTERO AL PASAR POR POZOS"},
-  {patente:"AG499SD",fecha:"10/06/2026",hora:"9:40",asesor:"NARELLA MANITTO",modelo:"Ranger P703 2.0L",motorizacion:"2.0LPANJ",propietario:"ARIEL CASARES",comentarios:"3ER SERVICIO SIN ITEMS ADICIONALES VALOR INFO: $711.396 IARA"},
-  {patente:"AI050RC",fecha:"10/06/2026",hora:"9:40",asesor:"PATRICIO DEL VALLE",modelo:"Ranger P703 2.0L",motorizacion:"2.0LPANC",propietario:"JULIAN TIEMPO",comentarios:"REVISION (G) RUIDO EN AMORTIGUADORES (48HS)"},
-  {patente:"AE649BG",fecha:"10/06/2026",hora:"10:00",asesor:"NARELLA MANITTO",modelo:"ECOSPORT 1.5L",motorizacion:"1.5DRAGA",propietario:"INES BENEDIT",comentarios:"5º SERVICE VALOR INF CON VOS $324.310 Hay un ruido en tren delantero pero siempre me lo engrasan y se soluciona"},
-  {patente:"AH709KD",fecha:"10/06/2026",hora:"10:40",asesor:"PATRICIO DEL VALLE",modelo:"Ranger Raptor",motorizacion:"3.0L",propietario:"CARLOS JOSE BUSCEMI",comentarios:"1º SERVICE (NO ITEMS/NO CAMPAÑAS)"},
+// ── TURNOS FALLBACK ──
+var turnosFallback=[
+  {patente:"AF468OX",fecha:"12/06/2026",hora:"8:00",asesor:"HORACIO SAMMARCO",modelo:"Maverick",motorizacion:"2.0LGTDI",propietario:"JULIO ALFONSO LOPEZ",comentarios:"2º SERVICE (ESPERA) VALOR INF $481.420 NO ITEMS, CAMPAÑA 26C10 REVISAR CALCO"},
+  {patente:"AH350DL",fecha:"12/06/2026",hora:"8:20",asesor:"NARELLA MANITTO",modelo:"Bronco",motorizacion:"2.0GTDIA",propietario:"MARIA ULRICH",comentarios:"1º SERVICE VALOR INF $449.270 25SC3-PANTALLA NEGRA DEL TABLERO VISTEON"},
+  {patente:"AF560DD",fecha:"12/06/2026",hora:"8:20",asesor:"PATRICIO DEL VALLE",modelo:"Bronco",motorizacion:"2.5L ATK",propietario:"CARLOS ROJAS",comentarios:"7º SERVICE (ESPERA) NO ITEMS/NO CAMPAÑAS"},
+  {patente:"AG179FT",fecha:"12/06/2026",hora:"8:40",asesor:"PATRICIO DEL VALLE",modelo:"Ranger P703 3.0L V6",motorizacion:"3.0L V6",propietario:"MARCELO RUBEN BASILOTTA",comentarios:"4to servicio (ESPERA)"},
+  {patente:"AH453RY",fecha:"12/06/2026",hora:"9:00",asesor:"",modelo:"",motorizacion:"",propietario:"",comentarios:""},
 ];
 
-// ══════════════════════════════════════════
-//  KM POR MODELO
-// ══════════════════════════════════════════
-const kmPorModelo = {
-  "KA 1.5L Dragon":        [15,30,45,60,75,90,105],
-  "Nuevo Fiesta 1.6L":     [15,30,45,60,75,90,105],
-  "ECOSPORT 1.5L":         [15,30,45,60,75,90,105],
-  "ECOSPORT 2.0L":         [15,30,45,60,75,90,105],
-  "Territory 1.8L":        [10,20,30,40,50,60,70,80,90,100],
-  "Ranger P703 3.0L V6":   [16,32,48,64,80,96,112,128,144,160],
-  "Ranger P703 2.0L":      [16,32,48,64,80,96,112,128,144,160],
-  "Ranger Raptor":         [16,32,48,64,80,96,112,128,144,160],
-  "Mondeo 2.0L/2.5L":      [15,30,45,60,75,90,105],
-  "Maverick":              [16,32,48,64,80,96,112],
-  "Maverick Hibrida":      [16,32,48,64,80,96,112],
-  "Bronco":                [15,30,45,60,75,90,105],
-  "Transit":               [15,30,45,60,75,90,105],
+// ── KM POR MODELO ──
+var kmPorModelo={
+  "KA 1.5L Dragon":       [15,30,45,60,75,90,105],
+  "Nuevo Fiesta 1.6L":    [15,30,45,60,75,90,105],
+  "ECOSPORT 1.5L":        [15,30,45,60,75,90,105],
+  "ECOSPORT 2.0L":        [15,30,45,60,75,90,105],
+  "Territory 1.8L":       [10,20,30,40,50,60,70,80,90,100],
+  "Ranger P703 3.0L V6":  [16,32,48,64,80,96,112,128,144,160],
+  "Ranger P703 2.0L":     [16,32,48,64,80,96,112,128,144,160],
+  "Ranger Raptor":        [16,32,48,64,80,96,112,128,144,160],
+  "Mondeo 2.0L/2.5L":     [15,30,45,60,75,90,105],
+  "Maverick":             [16,32,48,64,80,96,112],
+  "Maverick Hibrida":     [16,32,48,64,80,96,112],
+  "Bronco":               [15,30,45,60,75,90,105],
+  "Transit":              [15,30,45,60,75,90,105]
 };
 
-function actualizarSelectorKM(modelo){
-  const sel = document.getElementById('km-service');
-  const kmList = kmPorModelo[modelo] || [15,30,45,60,75,90,105];
-  sel.innerHTML = '<option value="">— Seleccionar —</option>';
-  kmList.forEach(k => {
-    const opt = document.createElement('option');
-    opt.value = k;
-    opt.textContent = `${(k*1000).toLocaleString('es-AR')} km`;
-    sel.appendChild(opt);
-  });
-}
-
-// ══════════════════════════════════════════
-//  FILTROS DESDE SHEET (estructura real)
-// ══════════════════════════════════════════
-const filtros = {
+// ── FILTROS POR MODELO ──
+var filtros={
   "KA 1.5L Dragon":[
     {n:"Aceite de Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"3.7L"},
     {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
@@ -413,105 +340,211 @@ const filtros = {
     {n:"Filtro de Polen",p:"8V51/18D543/AA/",km:[30,60,90],c:"1"},
     {n:"Filtro de Combustible",p:"E3BZ/9155/B/",km:[45,90],c:"1"},
     {n:"Bujías de Encendido",p:"GN1Z/12405/B/",km:[],c:"4"},
-    {n:"Líquido Freno y Embrague",p:"RBF/DOT4/MS/1",km:[],c:"1"},
-    {n:"Correas Auxiliares",p:"GN1G/6C301/AA/",km:[],c:"1"},
-    {n:"Correa de Distribución",p:"GN1Z/6268/D/",km:[],c:"1"},
-    {n:"Líquido de Enfriamiento",p:"R/RA/6A/",km:[],c:"1"},
+    {n:"Líquido Freno y Embrague",p:"RBF/DOT4/MS/1",km:[],c:"1"}
   ],
   "Nuevo Fiesta 1.6L":[
     {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"4L"},
     {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Elemento Filtro Aire",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Elemento Filtro Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Combustible",p:"",km:[45,90],c:"1"},
-    {n:"Bujía de Ignición",p:"",km:[60],c:"4"},
-    {n:"Líquido Freno Super DOT4",p:"",km:[45,90],c:"1"},
-    {n:"Refrigerante c/Naranja x4L",p:"",km:[105],c:"2.75"},
+    {n:"Filtro de Aire",p:"J7BZ/9601/B/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro de Polen",p:"8V51/18D543/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro de Combustible",p:"E3BZ/9155/B/",km:[45,90],c:"1"},
+    {n:"Bujía de Ignición",p:"4M5J/12405/AA/",km:[60],c:"4"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[45,90],c:"1"},
+    {n:"Refrigerante c/Naranja x4L",p:"R/RA/6A/",km:[105],c:"2.75L"}
   ],
   "ECOSPORT 1.5L":[
     {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"4L"},
     {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Filtro de Aire",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Combustible",p:"",km:[60],c:"1"},
-    {n:"Bujía de Ignición",p:"",km:[60],c:"4"},
-    {n:"Líquido Freno DOT4",p:"",km:[45,90],c:"1"},
+    {n:"Filtro de Aire",p:"GN15/9601/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro de Polen",p:"8V51/18D543/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro Combustible",p:"E3BZ/9155/B/",km:[60],c:"1"},
+    {n:"Bujía de Ignición",p:"GN1Z/12405/B/",km:[60],c:"4"},
+    {n:"Líquido Freno DOT4",p:"RBF/DOT4/MS/1",km:[45,90],c:"1"}
   ],
   "ECOSPORT 2.0L":[
     {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"5L"},
-    {n:"Filtro de Aceite",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Filtro de Aire",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Combustible",p:"",km:[45,90],c:"1"},
-    {n:"Bujía de Ignición",p:"",km:[60],c:"4"},
-    {n:"Líquido Freno DOT4",p:"",km:[45,90],c:"1"},
+    {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro de Aire",p:"GN15/9601/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro de Polen",p:"8V51/18D543/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro de Combustible",p:"E3BZ/9155/B/",km:[45,90],c:"1"},
+    {n:"Bujía de Ignición",p:"/1369704//",km:[60],c:"4"},
+    {n:"Líquido Freno DOT4",p:"RBF/DOT4/MS/1",km:[45,90],c:"1"}
   ],
   "Territory 1.8L":[
-    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"5.5L"},
-    {n:"Filtro de Aceite",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Filtro de Aire",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro de Combustible",p:"",km:[45,90],c:"1"},
-    {n:"Líquido Freno DOT4",p:"",km:[45,90],c:"1"},
+    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[10,20,30,40,50,60,70,80,90,100],c:"4.4L"},
+    {n:"Filtro de Aceite",p:"JS1/6744/AA/",km:[10,20,30,40,50,60,70,80,90,100],c:"1"},
+    {n:"Filtro de Aire",p:"FS1/9601/AA/",km:[30,60,90],c:"1"},
+    {n:"Filtro de Polen",p:"EJS1/19G245/BA/",km:[20,40,60,80,100],c:"1"},
+    {n:"Filtro Combustible",p:"JS1/9B072/BA/",km:[10,30,50,70,90],c:"1"},
+    {n:"Lubricante Caja Transmision",p:"/PN3H//",km:[40],c:"7"},
+    {n:"Filtro Caja Transmision",p:"/543128//",km:[40],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"1"}
   ],
   "Ranger P703 3.0L V6":[
-    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"9.5L"},
-    {n:"Filtro de Aceite",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Elemento Filtro Aire",p:"",km:[45,90],c:"1"},
-    {n:"Elemento Filtro Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro Combustible",p:"",km:[60],c:"1"},
-    {n:"Bujía de Ignición",p:"",km:[60],c:"8"},
-    {n:"Líquido Freno Super DOT4",p:"",km:[30,60,90],c:"1"},
-    {n:"Refrigerante c/Naranja x4L",p:"",km:[105],c:"6.5"},
+    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[16,32,48,64,80,96,112,128,144,160],c:"8.9L"},
+    {n:"Filtro de Aceite",p:"JL3Z/6731/A/",km:[16,32,48,64,80,96,112,128,144,160],c:"1"},
+    {n:"Filtro de Aire",p:"MB3Z/9601/C/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro de Polen",p:"MB3Z/19N619/C/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro Combustible",p:"KV6Z/9155/E/",km:[48,96,144],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"1"},
+    {n:"Refrigerante c/Naranja x4L",p:"R/RA/6A/",km:[],c:"6.5L"}
   ],
   "Ranger P703 2.0L":[
-    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"7L"},
-    {n:"Filtro de Aceite",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Elemento Filtro Aire",p:"",km:[45,90],c:"1"},
-    {n:"Elemento Filtro Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro Combustible",p:"",km:[60],c:"1"},
-    {n:"Líquido Freno Super DOT4",p:"",km:[30,60,90],c:"1"},
-    {n:"Refrigerante c/Naranja x4L",p:"",km:[105],c:"6.5"},
+    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[16,32,48,64,80,96,112,128,144,160],c:"8.1L"},
+    {n:"Filtro de Aceite",p:"BB3Q/6744/BA/",km:[16,32,48,64,80,96,112,128,144,160],c:"1"},
+    {n:"Filtro de Aire",p:"MB3Z/9601/C/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro de Polen",p:"MB3Z/19N619/C/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro Combustible",p:"KV6Z/9155/E/",km:[48,96,144],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"1"},
+    {n:"Refrigerante c/Naranja x4L",p:"R/RA/6A/",km:[],c:"6.5L"}
   ],
   "Ranger Raptor":[
-    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"9.5L"},
-    {n:"Filtro de Aceite",p:"",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Elemento Filtro Aire",p:"",km:[45,90],c:"1"},
-    {n:"Elemento Filtro Polen",p:"",km:[30,60,90],c:"1"},
-    {n:"Filtro Combustible",p:"",km:[60],c:"1"},
-    {n:"Bujía de Ignición",p:"",km:[60],c:"8"},
-    {n:"Líquido Freno Super DOT4",p:"",km:[30,60,90],c:"1"},
-    {n:"Refrigerante c/Naranja x4L",p:"",km:[105],c:"6.5"},
+    {n:"Aceite Motor Elaion F50D1 5W30 (x4L)",p:"R/AUROD1/MS/4",km:[16,32,48,64,80,96,112,128,144,160],c:"4 bidones"},
+    {n:"Aceite Motor Elaion F50D1 5W30 (x1L)",p:"R/AUROD1/MS/1",km:[16,32,48,64,80,96,112,128,144,160],c:"3 litros sueltos"},
+    {n:"Filtro de Aceite",p:"KU2Z/6731/A/",km:[16,32,48,64,80,96,112,128,144,160],c:"1"},
+    {n:"Filtro de Aire",p:"NB3Z/9601/A/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro de Polen",p:"MB3Z/19N619/C/",km:[32,64,96,128,160],c:"1"},
+    {n:"Filtro Combustible",p:"HU5Z/9155/A/",km:[48,96,144],c:"1"},
+    {n:"Bujías de Ignición",p:"CYFS/12Y/RT/3",km:[64,128],c:"6"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"1"}
   ],
   "Mondeo 2.0L/2.5L":[
-    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"5L"},
+    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"5.4L"},
     {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
-    {n:"Filtro de Aire",p:"DS7Z/9601/D/",km:[30,60,90],c:"1"},
-    {n:"Filtro Polen",p:"DG9Z/19N619/AA/",km:[30,60,90],c:"1"},
-    {n:"Filtro de Combustible",p:"2M5Z/9155/CA/",km:[45,90],c:"1"},
+    {n:"Filtro de Aire",p:"DS7Z/9601/D/",km:[45,90],c:"1"},
+    {n:"Filtro Polen",p:"DG9Z/19N619/AA/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro Combustible",p:"2M5Z/9155/CA/",km:[45,90],c:"1"},
     {n:"Bujía Ignición 2.0L",p:"CYFS/12Y/RT/3",km:[],c:"4"},
-    {n:"Bujía Ignición 2.5L",p:"AYFS/32Y/RX/",km:[],c:"5"},
-    {n:"Líquido Freno y Embrague",p:"RBF/DOT4/MS/1",km:[],c:"1"},
-    {n:"Líquido Refrigerante",p:"R/RA/6A/",km:[],c:"4L"},
-    {n:"Líquido Caja de Velocidades",p:"NU7Z/19A509/A/",km:[],c:"1"},
+    {n:"Líquido Freno y Embrague",p:"RBF/DOT4/MS/1",km:[45,90],c:"1"}
   ],
+  "Bronco":[
+    {n:"Aceite Motor Elaion F50D1 (x4L)",p:"R/AUROD102/MS/4",km:[15,30,45,60,75,90,105],c:"1 bidón"},
+    {n:"Aceite Motor Elaion F50D1 (x1L)",p:"R/AUROD102/MS/1",km:[15,30,45,60,75,90,105],c:"2 litros sueltos"},
+    {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro de Aire (desde Nov 2024)",p:"PZ1Z/9601/A/",km:[45,90],c:"1"},
+    {n:"Filtro de Polen",p:"LX6Z/19N619/CA/",km:[30,60,90],c:"1"},
+    {n:"Filtro Combustible",p:"LU5Z/9155/A/",km:[30,60,90],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"1"}
+  ],
+  "Maverick":[
+    {n:"Aceite Motor Elaion F50D (x4L)",p:"R/AUROD1/MS/4",km:[16,32,48,64,80,96,112],c:"4 bidones (cap. 5.2L)"},
+    {n:"Aceite Motor Elaion F50D (x1L)",p:"R/AUROD1/MS/1",km:[16,32,48,64,80,96,112],c:"2 litros sueltos"},
+    {n:"Filtro de Aceite (desde Nov 2024)",p:"NU2Z/6731/F/",km:[16,32,48,64,80,96,112],c:"1"},
+    {n:"Filtro de Aire (desde Nov 2024)",p:"PZ1Z/9601/A/",km:[48,96],c:"1"},
+    {n:"Filtro de Polen",p:"LX6Z/19N619/CA/",km:[32,64,96],c:"1"},
+    {n:"Filtro Combustible",p:"HU5Z/9155/B/",km:[64],c:"1"},
+    {n:"Bujías",p:"CYFS/12Y/RT/3",km:[32,64,96],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[64],c:"1"},
+    {n:"Refrigerante c/Naranja x4L",p:"R/RA/6A/",km:[],c:"4L"}
+  ],
+  "Maverick Hibrida":[
+    {n:"Aceite Motor Elaion F50D1 0W20 (x4L)",p:"R/AUROD102/MS/4",km:[16,32,48,64,80,96,112],c:"4 bidones (cap. 5.4L)"},
+    {n:"Aceite Motor Elaion F50D1 0W20 (x1L)",p:"R/AUROD102/MS/1",km:[16,32,48,64,80,96,112],c:"2 litros sueltos"},
+    {n:"Filtro de Aceite",p:"EM5G/6714/AA/",km:[16,32,48,64,80,96,112],c:"1"},
+    {n:"Filtro de Aire",p:"LX6Z/9601/A/",km:[48,96],c:"1"},
+    {n:"Filtro de Polen",p:"LX6Z/19N619/CA/",km:[32,64,96],c:"1"},
+    {n:"Bujías",p:"CYFS/12Y/RT/3",km:[],c:"1"},
+    {n:"Líquido Freno Super DOT4",p:"RBF/DOT4/MS/1",km:[],c:"4"},
+    {n:"Refrigerante c/Naranja x4L",p:"R/RA/6A/",km:[],c:"4L"}
+  ],
+  "Transit":[
+    {n:"Aceite Motor Elaion F50E",p:"R/AUROFE53/MS/205",km:[15,30,45,60,75,90,105],c:"10.1L"},
+    {n:"Filtro de Aceite",p:"BK2Q/6714/BA/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro de Aire",p:"BK31/9601/BA/",km:[15,30,45,60,75,90,105],c:"1"},
+    {n:"Filtro de Polen",p:"BK2Z/19N619/B/",km:[30,60,90],c:"1"}
+  ]
 };
 
-// ══════════════════════════════════════════
-//  GOOGLE LOGIN
-// ══════════════════════════════════════════
-function onGoogleLogin(response){
-  // Intercambiar token de ID por access token con OAuth implícito
-  iniciarOAuthImplicito();
+// ── FIRMAS ──
+var firmas={
+  cliente:{canvas:null,ctx:null,dibujando:false,tiene:false},
+  asesor:{canvas:null,ctx:null,dibujando:false,tiene:false}
+};
+var modalActivo=null,modalCtx=null,modalDibujando=false;
+
+function initFirma(id){
+  var c=document.getElementById('canvas-'+id);
+  firmas[id].canvas=c;
+  var ratio=window.devicePixelRatio||1;
+  var w=Math.min(c.parentElement.clientWidth-32,380);
+  c.width=w*ratio; c.height=150*ratio;
+  c.style.width=w+'px'; c.style.height='150px';
+  var ctx=c.getContext('2d');
+  ctx.scale(ratio,ratio);
+  ctx.strokeStyle='#003087'; ctx.lineWidth=2.5; ctx.lineCap='round'; ctx.lineJoin='round';
+  firmas[id].ctx=ctx;
+  bindFirmaEvents(c,firmas[id]);
 }
 
+function bindFirmaEvents(c,state){
+  function gp(e){var r=c.getBoundingClientRect(),s=e.touches?e.touches[0]:e;return{x:s.clientX-r.left,y:s.clientY-r.top};}
+  c.addEventListener('mousedown',function(e){state.dibujando=true;var p=gp(e);state.ctx.beginPath();state.ctx.moveTo(p.x,p.y);});
+  c.addEventListener('mousemove',function(e){if(!state.dibujando)return;var p=gp(e);state.ctx.lineTo(p.x,p.y);state.ctx.stroke();state.tiene=true;});
+  c.addEventListener('mouseup',function(){state.dibujando=false;});
+  c.addEventListener('mouseleave',function(){state.dibujando=false;});
+  c.addEventListener('touchstart',function(e){e.preventDefault();state.dibujando=true;var p=gp(e);state.ctx.beginPath();state.ctx.moveTo(p.x,p.y);},{passive:false});
+  c.addEventListener('touchmove',function(e){e.preventDefault();if(!state.dibujando)return;var p=gp(e);state.ctx.lineTo(p.x,p.y);state.ctx.stroke();state.tiene=true;},{passive:false});
+  c.addEventListener('touchend',function(){state.dibujando=false;});
+}
+
+function limpiarFirma(id){
+  var s=firmas[id];
+  s.ctx.clearRect(0,0,s.canvas.width,s.canvas.height);
+  s.tiene=false; s.canvas.classList.remove('firmado');
+  document.getElementById('label-'+id).textContent='Firmá con el dedo o el mouse';
+}
+
+function abrirModal(id){
+  modalActivo=id;
+  var modal=document.getElementById('modal-firma');
+  var mc=document.getElementById('modal-canvas');
+  document.getElementById('modal-titulo').textContent=id==='cliente'?'Firma del Cliente':'Firma del Asesor';
+  modal.classList.add('open');
+  var mw=modal.querySelector('.modal').clientWidth-40;
+  var ratio=window.devicePixelRatio||1;
+  mc.width=mw*ratio; mc.height=260*ratio;
+  mc.style.width=mw+'px'; mc.style.height='260px';
+  modalCtx=mc.getContext('2d');
+  modalCtx.scale(ratio,ratio);
+  modalCtx.strokeStyle='#003087'; modalCtx.lineWidth=3; modalCtx.lineCap='round'; modalCtx.lineJoin='round';
+  if(firmas[id].tiene) modalCtx.drawImage(firmas[id].canvas,0,0,mw,260);
+  function gp(e){var r=mc.getBoundingClientRect(),s=e.touches?e.touches[0]:e;return{x:s.clientX-r.left,y:s.clientY-r.top};}
+  mc.onmousedown=function(e){modalDibujando=true;var p=gp(e);modalCtx.beginPath();modalCtx.moveTo(p.x,p.y);};
+  mc.onmousemove=function(e){if(!modalDibujando)return;var p=gp(e);modalCtx.lineTo(p.x,p.y);modalCtx.stroke();};
+  mc.onmouseup=function(){modalDibujando=false;};
+  mc.addEventListener('touchstart',function(e){e.preventDefault();modalDibujando=true;var p=gp(e);modalCtx.beginPath();modalCtx.moveTo(p.x,p.y);},{passive:false});
+  mc.addEventListener('touchmove',function(e){e.preventDefault();if(!modalDibujando)return;var p=gp(e);modalCtx.lineTo(p.x,p.y);modalCtx.stroke();},{passive:false});
+  mc.addEventListener('touchend',function(){modalDibujando=false;});
+}
+
+function limpiarModalFirma(){
+  if(modalCtx){var mc=document.getElementById('modal-canvas');modalCtx.clearRect(0,0,mc.width,mc.height);}
+}
+
+function cerrarModal(ok){
+  if(ok&&modalActivo){
+    var mc=document.getElementById('modal-canvas');
+    var s=firmas[modalActivo];
+    var ratio=window.devicePixelRatio||1;
+    s.ctx.clearRect(0,0,s.canvas.width,s.canvas.height);
+    s.ctx.drawImage(mc,0,0,s.canvas.width/ratio,s.canvas.height/ratio);
+    s.tiene=true; s.canvas.classList.add('firmado');
+    document.getElementById('label-'+modalActivo).textContent='✅ Firma registrada';
+  }
+  document.getElementById('modal-firma').classList.remove('open');
+  modalActivo=null;
+}
+
+// ── GOOGLE LOGIN ──
+function onGoogleLogin(response){iniciarOAuthImplicito();}
+
 function iniciarOAuthImplicito(){
-  const client = google.accounts.oauth2.initTokenClient({
-    client_id: CLIENT_ID,
-    scope: SCOPES,
-    callback: (resp) => {
+  var client=google.accounts.oauth2.initTokenClient({
+    client_id:CLIENT_ID,
+    scope:'https://www.googleapis.com/auth/spreadsheets.readonly',
+    callback:function(resp){
       if(resp.error) return;
-      accessToken = resp.access_token;
+      accessToken=resp.access_token;
       document.getElementById('login-banner').style.display='none';
       document.getElementById('login-status').style.display='flex';
       document.getElementById('btn-reload').style.display='';
@@ -522,172 +555,130 @@ function iniciarOAuthImplicito(){
 }
 
 function cerrarSesion(){
-  accessToken=null;
-  turnosData=[];
+  accessToken=null; turnosData=[];
   document.getElementById('login-banner').style.display='block';
   document.getElementById('login-status').style.display='none';
   document.getElementById('btn-reload').style.display='none';
 }
 
-// Auto-recargar cada 5 minutos si hay sesión activa
-setInterval(()=>{
-  if(accessToken) cargarTurnosDesideDrive();
-}, 5 * 60 * 1000);
-
-// ══════════════════════════════════════════
-//  CARGAR TURNOS DESDE SHEETS
-// ══════════════════════════════════════════
 async function cargarTurnosDesideDrive(){
   if(!accessToken){turnosData=turnosFallback;return;}
   try{
-    const url=`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_TURNOS}/values/A:H?key=`;
-    const r=await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_TURNOS}/values/A1:H100`,{
-      headers:{Authorization:`Bearer ${accessToken}`}
+    var r=await fetch('https://sheets.googleapis.com/v4/spreadsheets/'+SHEET_TURNOS+'/values/A1:H200',{
+      headers:{Authorization:'Bearer '+accessToken}
     });
-    const data=await r.json();
+    var data=await r.json();
     if(!data.values){turnosData=turnosFallback;return;}
-    const rows=data.values.slice(1); // saltar header
-    turnosData=rows.filter(r=>r[4]).map(r=>({
-      fecha:r[0]||'',
-      hora:r[1]||'',
-      asesor:r[2]||'',
-      modelo:r[3]||'',
-      patente:(r[4]||'').toUpperCase().trim(),
-      motorizacion:r[5]||'',
-      propietario:r[6]||'',
-      comentarios:r[7]||''
-    }));
-    document.getElementById('login-user').textContent=`autobizposventa2025@gmail.com — ${turnosData.length} turnos cargados`;
-    mostrarNoti(`☁️ ${turnosData.length} turnos cargados desde Google Sheets`,3000);
+    var rows=data.values.slice(1);
+    turnosData=rows.filter(function(r){return r[4];}).map(function(r){return{
+      fecha:r[0]||'',hora:r[1]||'',asesor:r[2]||'',modelo:r[3]||'',
+      patente:(r[4]||'').toUpperCase().trim(),motorizacion:r[5]||'',
+      propietario:r[6]||'',comentarios:r[7]||''
+    };});
+    document.getElementById('login-user').textContent='autobizposventa2025@gmail.com — '+turnosData.length+' turnos cargados';
+    mostrarNoti('☁️ '+turnosData.length+' turnos cargados desde Google Sheets',3000);
+    setInterval(function(){if(accessToken)cargarTurnosDesideDrive();},5*60*1000);
   }catch(e){
     turnosData=turnosFallback;
     mostrarNoti('⚠️ Error al leer Drive. Usando datos de respaldo.',3000);
   }
 }
 
-// ══════════════════════════════════════════
-//  FIRMAS
-// ══════════════════════════════════════════
-const firmas={
-  cliente:{canvas:null,ctx:null,dibujando:false,tiene:false},
-  asesor:{canvas:null,ctx:null,dibujando:false,tiene:false}
-};
-let modalActivo=null,modalCtx=null,modalDibujando=false;
-
-function initFirma(id){
-  const c=document.getElementById('canvas-'+id);
-  firmas[id].canvas=c;
-  const ratio=window.devicePixelRatio||1;
-  const w=Math.min(c.parentElement.clientWidth-32,380);
-  c.width=w*ratio; c.height=150*ratio;
-  c.style.width=w+'px'; c.style.height='150px';
-  const ctx=c.getContext('2d');
-  ctx.scale(ratio,ratio);
-  ctx.strokeStyle='#003087'; ctx.lineWidth=2.5; ctx.lineCap='round'; ctx.lineJoin='round';
-  firmas[id].ctx=ctx;
-  bindFirmaEvents(c,firmas[id]);
-}
-
-function bindFirmaEvents(c,state){
-  const gp=e=>{const r=c.getBoundingClientRect(),s=e.touches?e.touches[0]:e;return{x:s.clientX-r.left,y:s.clientY-r.top};};
-  c.addEventListener('mousedown',e=>{state.dibujando=true;const p=gp(e);state.ctx.beginPath();state.ctx.moveTo(p.x,p.y);});
-  c.addEventListener('mousemove',e=>{if(!state.dibujando)return;const p=gp(e);state.ctx.lineTo(p.x,p.y);state.ctx.stroke();state.tiene=true;});
-  c.addEventListener('mouseup',()=>state.dibujando=false);
-  c.addEventListener('mouseleave',()=>state.dibujando=false);
-  c.addEventListener('touchstart',e=>{e.preventDefault();state.dibujando=true;const p=gp(e);state.ctx.beginPath();state.ctx.moveTo(p.x,p.y);},{passive:false});
-  c.addEventListener('touchmove',e=>{e.preventDefault();if(!state.dibujando)return;const p=gp(e);state.ctx.lineTo(p.x,p.y);state.ctx.stroke();state.tiene=true;},{passive:false});
-  c.addEventListener('touchend',()=>state.dibujando=false);
-}
-
-function limpiarFirma(id){
-  const s=firmas[id];
-  s.ctx.clearRect(0,0,s.canvas.width,s.canvas.height);
-  s.tiene=false; s.canvas.classList.remove('firmado');
-  document.getElementById('label-'+id).textContent='Firmá con el dedo o el mouse';
-}
-
-function abrirModal(id){
-  modalActivo=id;
-  const modal=document.getElementById('modal-firma');
-  const mc=document.getElementById('modal-canvas');
-  document.getElementById('modal-titulo').textContent=id==='cliente'?'Firma del Cliente':'Firma del Asesor';
-  modal.classList.add('open');
-  const mw=modal.querySelector('.modal').clientWidth-40;
-  const ratio=window.devicePixelRatio||1;
-  mc.width=mw*ratio; mc.height=260*ratio;
-  mc.style.width=mw+'px'; mc.style.height='260px';
-  modalCtx=mc.getContext('2d');
-  modalCtx.scale(ratio,ratio);
-  modalCtx.strokeStyle='#003087'; modalCtx.lineWidth=3; modalCtx.lineCap='round'; modalCtx.lineJoin='round';
-  if(firmas[id].tiene) modalCtx.drawImage(firmas[id].canvas,0,0,mw,260);
-  const gp=e=>{const r=mc.getBoundingClientRect(),s=e.touches?e.touches[0]:e;return{x:s.clientX-r.left,y:s.clientY-r.top};};
-  mc.onmousedown=e=>{modalDibujando=true;const p=gp(e);modalCtx.beginPath();modalCtx.moveTo(p.x,p.y);};
-  mc.onmousemove=e=>{if(!modalDibujando)return;const p=gp(e);modalCtx.lineTo(p.x,p.y);modalCtx.stroke();};
-  mc.onmouseup=()=>modalDibujando=false;
-  mc.addEventListener('touchstart',e=>{e.preventDefault();modalDibujando=true;const p=gp(e);modalCtx.beginPath();modalCtx.moveTo(p.x,p.y);},{passive:false});
-  mc.addEventListener('touchmove',e=>{e.preventDefault();if(!modalDibujando)return;const p=gp(e);modalCtx.lineTo(p.x,p.y);modalCtx.stroke();},{passive:false});
-  mc.addEventListener('touchend',()=>modalDibujando=false);
-}
-
-function limpiarModalFirma(){if(modalCtx){const mc=document.getElementById('modal-canvas');modalCtx.clearRect(0,0,mc.width,mc.height);}}
-
-function cerrarModal(ok){
-  if(ok&&modalActivo){
-    const mc=document.getElementById('modal-canvas');
-    const s=firmas[modalActivo];
-    const ratio=window.devicePixelRatio||1;
-    s.ctx.clearRect(0,0,s.canvas.width,s.canvas.height);
-    s.ctx.drawImage(mc,0,0,s.canvas.width/ratio,s.canvas.height/ratio);
-    s.tiene=true; s.canvas.classList.add('firmado');
-    document.getElementById('label-'+modalActivo).textContent='✅ Firma registrada';
-  }
-  document.getElementById('modal-firma').classList.remove('open');
-  modalActivo=null;
-}
-
-// ══════════════════════════════════════════
-//  INIT
-// ══════════════════════════════════════════
-window.onload=()=>{
+// ── INIT ──
+window.onload=function(){
   turnosData=turnosFallback;
   actualizarReloj(); setInterval(actualizarReloj,1000);
   generarNroOrden();
-  const hoy=new Date();
+  var hoy=new Date();
   document.getElementById('fecha-turno').value=hoy.toLocaleDateString('es-AR');
   document.getElementById('fecha-entrega').value=hoy.toISOString().split('T')[0];
-  const hh=String(hoy.getHours()).padStart(2,'0'),mm=String(hoy.getMinutes()).padStart(2,'0');
-  document.getElementById('hora-ingreso').value=`${hh}:${mm}`;
+  var hh=String(hoy.getHours()).padStart(2,'0'),mm=String(hoy.getMinutes()).padStart(2,'0');
+  document.getElementById('hora-ingreso').value=hh+':'+mm;
   initFirma('cliente'); initFirma('asesor');
 };
 
 function actualizarReloj(){
-  const el=document.getElementById('fecha-hora');
-  if(el)el.textContent=new Date().toLocaleString('es-AR');
+  var el=document.getElementById('fecha-hora');
+  if(el) el.textContent=new Date().toLocaleString('es-AR');
 }
+
 function generarNroOrden(){
-  const n='PO-'+new Date().getFullYear()+'-'+String(Math.floor(Math.random()*9000)+1000);
+  var n='PO-'+new Date().getFullYear()+'-'+String(Math.floor(Math.random()*9000)+1000);
   document.getElementById('nro-orden').value=n;
   document.getElementById('nro-display').textContent=n;
 }
 
-// ══════════════════════════════════════════
-//  BUSCAR PATENTE
-// ══════════════════════════════════════════
+// ── MODELO CHANGE ──
+function onModeloChange(){
+  var modelo=document.getElementById('modelo').value;
+  // actualizar selector KM
+  var sel=document.getElementById('km-service');
+  var kmList=kmPorModelo[modelo]||[15,30,45,60,75,90,105];
+  sel.innerHTML='<option value="">— Seleccionar —</option>';
+  kmList.forEach(function(k){
+    var opt=document.createElement('option');
+    opt.value=k;
+    opt.textContent=(k*1000).toLocaleString('es-AR')+' km';
+    sel.appendChild(opt);
+  });
+  renderFiltros();
+}
+
+// ── RENDER FILTROS ──
+function renderFiltros(){
+  var modelo=document.getElementById('modelo').value;
+  var cont=document.getElementById('tabla-filtros');
+  var badge=document.getElementById('badge-service');
+  if(!modelo||!filtros[modelo]){
+    cont.innerHTML='<div class="no-data">Seleccioná un modelo para ver los filtros</div>';
+    badge.textContent='';
+    return;
+  }
+  badge.textContent=modelo;
+  var kmSel=parseInt(document.getElementById('km-service').value)||0;
+  var lista=filtros[modelo];
+  var html='<table><thead><tr><th class="check-col">✓</th><th>Repuesto / Insumo</th><th>Código Pieza</th><th>Cant.</th><th class="nota-col">Observación</th></tr></thead><tbody>';
+  lista.forEach(function(f,i){
+    var inc=kmSel&&f.km.length>0&&f.km.indexOf(kmSel)>=0;
+    var chk=kmSel===0?'checked':(inc?'checked':'');
+    var cls=(kmSel>0&&!inc&&f.km.length>0)?'row-off':'';
+    html+='<tr class="'+cls+'" id="fr'+i+'"><td class="check-col"><input type="checkbox" '+chk+' onchange="this.closest(\'tr\').classList.toggle(\'row-off\')"></td><td><input type="text" value="'+f.n+'" style="width:100%"></td><td><input type="text" value="'+f.p+'" style="width:100%"></td><td class="qty-col"><input type="text" value="'+f.c+'" style="width:58px"></td><td class="nota-col"><input type="text" placeholder="Nota..."></td></tr>';
+  });
+  html+='</tbody></table><div style="margin-top:10px"><button class="btn btn-secondary no-print" onclick="addFiltro()">+ Agregar insumo</button></div>';
+  cont.innerHTML=html;
+}
+
+function addFiltro(){
+  var tbody=document.querySelector('#tabla-filtros tbody');
+  if(!tbody) return;
+  var tr=document.createElement('tr');
+  tr.innerHTML='<td class="check-col"><input type="checkbox" checked></td><td><input type="text" placeholder="Nombre del repuesto..."></td><td><input type="text" placeholder="Código..."></td><td class="qty-col"><input type="text" value="1" style="width:58px"></td><td class="nota-col"><input type="text" placeholder="Nota..."></td>';
+  tbody.appendChild(tr);
+}
+
+function addTrabajo(){
+  var tbody=document.getElementById('tbody-trabajos');
+  var tr=document.createElement('tr');
+  tr.innerHTML='<td class="check-col"><input type="checkbox" checked></td><td><input type="text" placeholder="Descripción..."></td><td><input type="number" value="1" min="0" step="0.25" style="width:64px"></td><td><input type="text" placeholder="Nota..."></td>';
+  tbody.appendChild(tr);
+}
+
+// ── BUSCAR PATENTE ──
 function buscarPatente(val){
   val=val.trim().toUpperCase();
-  const cont=document.getElementById('sugerencias');
+  var cont=document.getElementById('sugerencias');
   cont.innerHTML='';
   if(val.length<3){document.getElementById('alert-not-found').style.display='none';return;}
-  const src=turnosData.length?turnosData:turnosFallback;
-  const matches=src.filter(t=>t.patente.includes(val));
+  var src=turnosData.length?turnosData:turnosFallback;
+  var matches=src.filter(function(t){return t.patente.indexOf(val)>=0;});
   if(!matches.length){document.getElementById('alert-not-found').style.display='block';return;}
   document.getElementById('alert-not-found').style.display='none';
   if(matches.length===1&&matches[0].patente===val){llenarDatos(matches[0]);return;}
-  const ul=document.createElement('ul');
-  matches.forEach(t=>{
-    const li=document.createElement('li');
-    li.innerHTML=`<strong>${t.patente}</strong> — ${t.propietario} <span style="color:#999;font-size:11px">${t.modelo} ${t.hora}</span>`;
-    li.onclick=()=>{document.getElementById('patente').value=t.patente;llenarDatos(t);cont.innerHTML='';};
+  var ul=document.createElement('ul');
+  matches.forEach(function(t){
+    var li=document.createElement('li');
+    li.innerHTML='<strong>'+t.patente+'</strong> — '+t.propietario+' <span style="color:#999;font-size:11px">'+t.modelo+' '+t.hora+'</span>';
+    li.onclick=function(){document.getElementById('patente').value=t.patente;llenarDatos(t);cont.innerHTML='';};
     ul.appendChild(li);
   });
   cont.appendChild(ul);
@@ -696,125 +687,84 @@ function buscarPatente(val){
 function llenarDatos(t){
   document.getElementById('propietario').value=t.propietario||'';
   document.getElementById('comentarios').value=t.comentarios||'';
-  if(t.fecha)document.getElementById('fecha-turno').value=t.fecha;
-  // hora
+  if(t.fecha) document.getElementById('fecha-turno').value=t.fecha;
   if(t.hora){
-    let h=String(t.hora).replace(':','');
-    if(h.length<=4){const hh=h.slice(0,-2).padStart(2,'0'),mm=h.slice(-2);document.getElementById('hora-ingreso').value=`${hh}:${mm}`;}
+    var h=String(t.hora).replace(':','');
+    if(h.length<=4){var hh=h.slice(0,-2).padStart(2,'0'),mm=h.slice(-2).padStart(2,'0');document.getElementById('hora-ingreso').value=hh+':'+mm;}
     else document.getElementById('hora-ingreso').value=t.hora;
   }
-  const as=document.getElementById('asesor');
-  for(let o of as.options){if(o.value.toUpperCase()===t.asesor.toUpperCase()){as.value=o.value;break;}}
-  const ms=document.getElementById('modelo');
+  var as=document.getElementById('asesor');
+  for(var i=0;i<as.options.length;i++){if(as.options[i].value.toUpperCase()===t.asesor.toUpperCase()){as.value=as.options[i].value;break;}}
+  var ms=document.getElementById('modelo');
   if(t.modelo){
-    for(let o of ms.options){
-      if(o.value&&(o.value===t.modelo||t.modelo.toUpperCase().includes(o.value.toUpperCase().split(' ')[0]))){ms.value=o.value;break;}
+    for(var j=0;j<ms.options.length;j++){
+      if(ms.options[j].value&&(ms.options[j].value===t.modelo||t.modelo.toUpperCase().indexOf(ms.options[j].value.toUpperCase().split(' ')[0])>=0)){
+        ms.value=ms.options[j].value;break;
+      }
     }
   }
-  if(t.motorizacion)document.getElementById('motorizacion').value=t.motorizacion;
-  cargarFiltros();
-}
-
-// ══════════════════════════════════════════
-//  FILTROS
-// ══════════════════════════════════════════
-function cargarFiltros(){
-  const modelo=document.getElementById('modelo').value;
-  actualizarSelectorKM(modelo);
-  renderFiltros();
-}
-
-function renderFiltros(){
-  const modelo=document.getElementById('modelo').value;
-  const cont=document.getElementById('tabla-filtros');
-  const badge=document.getElementById('badge-service');
-  if(!modelo||!filtros[modelo]){cont.innerHTML='<div class="no-data">Seleccioná un modelo para ver los filtros</div>';badge.textContent='';return;}
-  badge.textContent=modelo;
-  const kmSel=parseInt(document.getElementById('km-service').value)||0;
-  const lista=filtros[modelo];
-  let html=`<table><thead><tr><th class="check-col">✓</th><th>Repuesto / Insumo</th><th>Código Pieza</th><th>Cant.</th><th class="nota-col">Observación</th></tr></thead><tbody>`;
-  lista.forEach((f,i)=>{
-    const inc=kmSel&&f.km.length>0&&f.km.includes(kmSel);
-    const chk=kmSel===0?'checked':(inc?'checked':'');
-    const cls=(kmSel>0&&!inc&&f.km.length>0)?'row-off':'';
-    html+=`<tr class="${cls}" id="fr${i}"><td class="check-col"><input type="checkbox" ${chk} onchange="this.closest('tr').classList.toggle('row-off')"></td><td><input type="text" value="${f.n}" style="width:100%"></td><td><input type="text" value="${f.p}" style="width:100%"></td><td class="qty-col"><input type="text" value="${f.c}" style="width:58px"></td><td class="nota-col"><input type="text" placeholder="Nota..."></td></tr>`;
-  });
-  html+='</tbody></table><div style="margin-top:10px"><button class="btn btn-secondary no-print" onclick="addFiltro()">+ Agregar insumo</button></div>';
-  cont.innerHTML=html;
-}
-
-function addFiltro(){
-  const tbody=document.querySelector('#tabla-filtros tbody');
-  if(!tbody)return;
-  const tr=document.createElement('tr');
-  tr.innerHTML=`<td class="check-col"><input type="checkbox" checked></td><td><input type="text" placeholder="Nombre del repuesto..."></td><td><input type="text" placeholder="Código..."></td><td class="qty-col"><input type="text" value="1" style="width:58px"></td><td class="nota-col"><input type="text" placeholder="Nota..."></td>`;
-  tbody.appendChild(tr);
-}
-
-function addTrabajo(){
-  const tbody=document.getElementById('tbody-trabajos');
-  const tr=document.createElement('tr');
-  tr.innerHTML=`<td class="check-col"><input type="checkbox" checked></td><td><input type="text" placeholder="Descripción..."></td><td><input type="number" value="1" min="0" step="0.25" style="width:64px"></td><td><input type="text" placeholder="Nota..."></td>`;
-  tbody.appendChild(tr);
+  if(t.motorizacion) document.getElementById('motorizacion').value=t.motorizacion;
+  onModeloChange();
 }
 
 function setEstado(el,val){
-  document.querySelectorAll('.estado-badge').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active'); document.getElementById('estado-val').value=val;
+  document.querySelectorAll('.estado-badge').forEach(function(b){b.classList.remove('active');});
+  el.classList.add('active');
+  document.getElementById('estado-val').value=val;
 }
 
 function actualizarKm(){
-  const km=parseInt(document.getElementById('km').value);
+  var km=parseInt(document.getElementById('km').value);
   if(!km){document.getElementById('km-info').textContent='';return;}
-  const prox=[15000,30000,45000,60000,75000,90000,105000,120000].find(k=>k>km);
-  if(prox)document.getElementById('km-info').textContent=`Próximo service: ${prox.toLocaleString('es-AR')} km (faltan ${(prox-km).toLocaleString('es-AR')} km)`;
+  var proximos=[15000,30000,45000,60000,75000,90000,105000,120000,16000,32000,48000,64000,80000,96000,112000];
+  proximos.sort(function(a,b){return a-b;});
+  var prox=proximos.find(function(k){return k>km;});
+  if(prox) document.getElementById('km-info').textContent='Próximo service: '+prox.toLocaleString('es-AR')+' km (faltan '+(prox-km).toLocaleString('es-AR')+' km)';
 }
 
-// ══════════════════════════════════════════
-//  PDF Y ACCIONES
-// ══════════════════════════════════════════
 function guardarPDF(){
-  const pat=(document.getElementById('patente').value||'SIN-PATENTE').trim().toUpperCase().replace(/\s/g,'');
-  const fec=document.getElementById('fecha-turno').value||new Date().toLocaleDateString('es-AR');
-  const nombre=`${pat}_${fec.replace(/\//g,'-')}`;
-  mostrarNoti(`📄 Preparando: ${nombre}.pdf`);
-  document.querySelectorAll('.no-print').forEach(el=>el.style.display='none');
-  setTimeout(()=>{
-    const orig=document.title; document.title=nombre;
+  var pat=(document.getElementById('patente').value||'SIN-PATENTE').trim().toUpperCase().replace(/\s/g,'');
+  var fec=document.getElementById('fecha-turno').value||new Date().toLocaleDateString('es-AR');
+  var nombre=pat+'_'+fec.replace(/\//g,'-');
+  mostrarNoti('📄 Preparando: '+nombre+'.pdf');
+  document.querySelectorAll('.no-print').forEach(function(el){el.style.display='none';});
+  setTimeout(function(){
+    var orig=document.title; document.title=nombre;
     window.print();
     document.title=orig;
-    document.querySelectorAll('.no-print').forEach(el=>el.style.display='');
-    setTimeout(()=>mostrarNoti(`✅ Seleccioná "Guardar como PDF" → C:\\PRE ORDEN\\${nombre}.pdf`,7000),500);
+    document.querySelectorAll('.no-print').forEach(function(el){el.style.display='';});
+    setTimeout(function(){mostrarNoti('✅ Seleccioná "Guardar como PDF" → C:\\PRE ORDEN\\'+nombre+'.pdf',7000);},500);
   },300);
 }
 
-function mostrarNoti(msg,dur=0){
-  const n=document.getElementById('pdf-notice');
+function mostrarNoti(msg,dur){
+  var n=document.getElementById('pdf-notice');
   n.textContent=msg; n.style.display='block';
-  if(dur)setTimeout(()=>n.style.display='none',dur);
+  if(dur) setTimeout(function(){n.style.display='none';},dur);
 }
 
 function limpiarForm(){
-  if(!confirm('¿Limpiar el formulario para una nueva orden?'))return;
-  ['patente','propietario','motorizacion','km','comentarios'].forEach(id=>document.getElementById(id).value='');
+  if(!confirm('¿Limpiar el formulario para una nueva orden?')) return;
+  ['patente','propietario','motorizacion','km','comentarios'].forEach(function(id){document.getElementById(id).value='';});
   document.getElementById('asesor').value='';
   document.getElementById('modelo').value='';
+  document.getElementById('km-service').innerHTML='<option value="">— Seleccionar —</option>';
   document.getElementById('tabla-filtros').innerHTML='<div class="no-data">Seleccioná un modelo para ver los filtros</div>';
   document.getElementById('badge-service').textContent='';
   document.getElementById('alert-not-found').style.display='none';
   document.getElementById('km-info').textContent='';
   document.getElementById('sugerencias').innerHTML='';
-  document.getElementById('tbody-trabajos').innerHTML=`<tr><td class="check-col"><input type="checkbox" checked></td><td><input type="text" value="Cambio de aceite y filtro"></td><td><input type="number" value="0.5" min="0" step="0.25" style="width:64px"></td><td><input type="text" placeholder="Nota..."></td></tr>`;
+  document.getElementById('tbody-trabajos').innerHTML='<tr><td class="check-col"><input type="checkbox" checked></td><td><input type="text" value="Cambio de aceite y filtro"></td><td><input type="number" value="0.5" min="0" step="0.25" style="width:64px"></td><td><input type="text" placeholder="Nota..."></td></tr>';
   limpiarFirma('cliente'); limpiarFirma('asesor');
   generarNroOrden();
   document.getElementById('fecha-turno').value=new Date().toLocaleDateString('es-AR');
 }
 
 function guardarOrden(){
-  const p=document.getElementById('patente').value;
-  const pr=document.getElementById('propietario').value;
+  var p=document.getElementById('patente').value;
+  var pr=document.getElementById('propietario').value;
   if(!p||!pr){alert('Completá al menos la patente y el propietario.');return;}
-  alert(`✅ Pre Orden ${document.getElementById('nro-orden').value} guardada.\n\nPatente: ${p}\nPropietario: ${pr}\nEstado: ${document.getElementById('estado-val').value}\nFirma cliente: ${firmas.cliente.tiene?'✅':'⚠️ pendiente'}\nFirma asesor: ${firmas.asesor.tiene?'✅':'⚠️ pendiente'}`);
+  alert('✅ Pre Orden '+document.getElementById('nro-orden').value+' guardada.\n\nPatente: '+p+'\nPropietario: '+pr+'\nEstado: '+document.getElementById('estado-val').value+'\nFirma cliente: '+(firmas.cliente.tiene?'✅':'⚠️ pendiente')+'\nFirma asesor: '+(firmas.asesor.tiene?'✅':'⚠️ pendiente'));
 }
 </script>
 </body>
